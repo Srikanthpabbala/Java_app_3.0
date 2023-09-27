@@ -74,7 +74,6 @@ pipeline{
         }
         stage("push JAR to JFROGG : python")(
         hen { expression {  params.action == 'create' } }
-                   jarpush()
                }
             }
         }
