@@ -72,8 +72,12 @@ pipeline{
                }
             }
         }
-        stage("push JAR to JFROGG : python")(
+        stage("push jar to jfrog : python")(
         hen { expression {  params.action == 'create' } }
+            steps{
+               script{
+                   
+                   dockerBuild
                }
             }
         }
