@@ -7,7 +7,7 @@ password = "Password1"
 repo_key = "example-repo-local"  # The target repository key in Artifactory
 
 # Path to the JAR file
-jar_file_path = "/home/ubuntu/Java_app_3.0.git/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar"
+jar_file_path = "Java_app_3.0.git/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar"
 
 # Construct the upload URL
 upload_url = f"{artifactory_url}/{repo_key}/{jar_file_path}"
