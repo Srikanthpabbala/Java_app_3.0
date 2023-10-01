@@ -1,7 +1,7 @@
 import requests
 
 # JFrog Artifactory details
-artifactory_url = "http://54.193.246.183:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar"
+artifactory_url = "http://3.27.161.141:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar"
 username = "admin"
 password = "Password1"
 repo_key = "example-repo-local"  # The target repository key in Artifactory
