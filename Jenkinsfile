@@ -67,20 +67,11 @@ pipeline {
             }
         }
 
-        stage('Jar push JFROG : jfrog') {
+       stage('Push jar to Jfrog : Python') {
             when { expression { params.action == 'create' } }
             steps {
                 script {
-                    def artifactoryUrl = 'http://18.212.29.33:8082/artifactory'
-                    def artifactoryRepo = 'example-repo-local'
-                    def jarFileName = 'kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
-                    def targetPath = "${artifactoryRepo}/mamta/"
-
-                    sh """
-                    cd /var/lib/jenkins/workspace/Jenkinspipeline/target/
-                    chmod +x ${jarFileName}
-                    curl -X PUT -u admin:Password1 -T ${jarFileName} ${artifactoryUrl}/${targetPath}
-                    """
+                    jarpush()
                 }
             }
         }
