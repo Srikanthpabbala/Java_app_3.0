@@ -20,7 +20,26 @@ pipeline {
                 )
             }
         }
-
+            //  stage('Static code analysis: Sonarqube'){
+       //   when { expression {  params.action == 'create' } }
+       //      steps{
+       //         script{
+                   
+       //             def SonarQubecredentialsId = 'sonarqube-api'
+       //             statiCodeAnalysis(SonarQubecredentialsId)
+       //         }
+       //      }
+       // }
+       // stage('Quality Gate Status Check : Sonarqube'){
+       //   when { expression {  params.action == 'create' } }
+       //      steps{
+       //         script{
+                   
+       //             def SonarQubecredentialsId = 'sonarqube-api'
+       //             QualityGateStatus(SonarQubecredentialsId)
+       //         }
+       //      }
+       // }
         stage('Unit Test maven') {
             when { expression { params.action == 'create' } }
             steps {
