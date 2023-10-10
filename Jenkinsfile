@@ -71,7 +71,7 @@ pipeline {
             when { expression { params.action == 'create' } }
             steps {
                 script {
-                    def artifactoryUrl = 'http://100.26.210.70:8082/artifactory'
+                    def artifactoryUrl = 'http://18.212.29.33:8082/artifactory'
                     def artifactoryRepo = 'example-repo-local'
                     def jarFileName = 'kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
                     def targetPath = "${artifactoryRepo}/mamta/"
